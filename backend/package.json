@@ -1,0 +1,21 @@
+{
+    "name": "better-auth-demo-backend",
+    "private": true,
+    "scripts": {
+        "build": "nitro build",
+        "dev": "nitro dev",
+        "preview": "node .output/server/index.mjs",
+        "db:auth:generate": "npx @better-auth/cli generate --config ./server/utils/auth.ts --yes",
+        "db:auth:migrate": "npx @better-auth/cli migrate --config ./server/utils/auth.ts --yes"
+    },
+    "devDependencies": {
+        "h3": "^1.15.4",
+        "nitropack": "^2.12.4"
+    },
+    "dependencies": {
+        "@types/node": "^24.10.1",
+        "@types/pg": "^8.15.6",
+        "better-auth": "^1.4.0",
+        "pg": "^8.16.3"
+    }
+}
